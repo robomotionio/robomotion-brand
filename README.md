@@ -129,6 +129,33 @@ inside the 1546 × 423 box with a 26 px inset, so nothing clips on any device �
 the grid, arc and glows are the only things that extend past it.
 `banner/preview/device-crops-05.png` shows the three crops side by side.
 
+### Chrome Web Store
+
+`chrome-web-store/` — promo tiles in the two sizes the store asks for.
+Same visual system as the banners.
+
+| Folder | Size | Store slot |
+|---|---|---|
+| `small-440x280/` | 440 × 280 | Small promo tile |
+| `marquee-1400x560/` | 1400 × 560 | Marquee promo tile |
+
+Three copy options in each size, same filename suffix across both so they pair:
+`agentic-rpa`, `real-software`, `no-per-robot`.
+
+**Format matters here.** The store requires JPEG or **24-bit PNG with no alpha
+channel** — a transparent PNG is rejected. These are flattened onto `#0a0a0b`
+and written as 8-bit-per-channel TrueColor with the alpha channel removed, not
+merely made opaque. Verify any replacement with:
+
+```
+magick identify -format '%wx%h alpha=%A type=%[type]\n' file.png
+# must report  alpha=Undefined  type=TrueColor
+```
+
+The 440 × 280 tile carries shorter headlines than the marquee. The long ones do
+not fit at that width without crowding the edges, so the two sizes deliberately
+run different copy rather than the same line scaled down.
+
 ### Regenerating
 
 Sources are in `banner/src/*.html`. Each renders at exactly 2560 × 1440:
