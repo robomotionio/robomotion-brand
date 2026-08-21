@@ -169,6 +169,9 @@ slot takes (max 5 per listing). Same no-alpha 24-bit PNG rule as the tiles.
 | `robomotion-fork-branch-1280x800.png` | Padded. Cropping to 1.6 truncated the panel annotation paragraphs mid-word, so the full UI is letterboxed instead |
 | `robomotion-record-actions-640x400.png` | Composited. Source dialog is near-square (527 x 511); set on the brand backdrop at 0.689 scale with a drop shadow rather than flat letterbox bars |
 | `robomotion-record-actions-640x400-ip-masked.png` | Same, with the machine IP pixelated |
+| `robomotion-scrape-table-1280x800.png` | Composited. Portrait source (682 x 814) centred on the brand backdrop |
+| `robomotion-scrape-table-1280x800-with-copy.png` | Same window set right, with a headline in the space a portrait shot leaves over |
+| `robomotion-web-recorder-1280x800.png` | Padded. A 1.6 crop truncated the browser URL bar and sliced the first product card |
 
 **Check screenshots for live data before publishing** - machine IPs, hostnames,
 customer names and file paths all leak through UI captures.
