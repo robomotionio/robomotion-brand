@@ -95,6 +95,51 @@ starts to fill in.
   dark one — pick the colourway by contrast, not by habit.
 - Do not re-typeset the wordmark; it is drawn as outlines, not live text.
 
+## Banners
+
+Built from the live site's own tokens (`app/globals.css`, `HeroV2.tsx`,
+`AnimatedAppGrid.tsx`): ground `#0a0a0b`, a 64 px grid of `rgba(255,255,255,.5)`
+lines at 8% opacity, the orange horizon arc, and Geist / Geist Mono.
+
+**Note the two oranges.** The logo accent is `#FA6400`. The site's atmosphere —
+arc, glows, headline gradient, badge dot — uses Tailwind `orange-500` `#F97316`,
+with `orange-400` `#FB923C` → `orange-600` `#EA580C` for the headline gradient.
+These are deliberately different values; the banners keep the logo at `#FA6400`
+and the atmosphere at `#F97316`.
+
+### YouTube
+
+`banner/youtube/` — all 2560 × 1440 PNG, ~240 KB each (YouTube asks for at
+least 2048 × 1152 and 6 MB or less).
+
+| File | Hero line |
+|---|---|
+| `robomotion-yt-05-agentic-rpa.png` | **Agentic RPA Platform** — identity, positioning, proof |
+| `robomotion-yt-06-agentic-strip.png` | Agents that do the work. |
+| `robomotion-yt-07-agentic-tiles.png` | **Agentic RPA Platform** with stat tiles |
+| `robomotion-yt-01-agent-teams.png` | AI agent teams for your business. |
+| `robomotion-yt-02-tell-ai.png` | Tell AI what to automate. |
+| `robomotion-yt-03-no-developer.png` | Building an agent used to need a developer. |
+| `robomotion-yt-04-your-tools.png` | Agents that work in your tools. |
+
+**Safe areas.** YouTube crops channel art per device, and only the centre
+**1546 × 423** survives on mobile. Desktop shows 2560 × 423; the full
+2560 × 1440 appears only on TV. Every banner keeps all text and the wordmark
+inside the 1546 × 423 box with a 26 px inset, so nothing clips on any device —
+the grid, arc and glows are the only things that extend past it.
+`banner/preview/device-crops-05.png` shows the three crops side by side.
+
+### Regenerating
+
+Sources are in `banner/src/*.html`. Each renders at exactly 2560 × 1440:
+
+```
+chromium --headless --window-size=2560,1440 --virtual-time-budget=15000 \
+  --screenshot=out.png banner/src/05-agentic-rpa.html
+```
+
+Geist loads from Google Fonts, so rendering needs network access.
+
 ## Note on the source file
 
 The original SVG contained a second, mirrored accent shape at the top of the
