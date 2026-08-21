@@ -23,6 +23,31 @@ anywhere vector is not accepted. All PNGs have a transparent background — the
 `white` PNG will look blank in a file browser on a white page; that is expected.
 The PDFs are true vector (no embedded raster) and single-page.
 
+## Icon
+
+The icon is the wordmark's **R plus the accent wedge**, cut from the same vector
+master — nothing is redrawn. Ink occupies 60% of the square and is centred,
+matching the proportions of the previous icon.
+
+| File | Ink | Background | Use |
+|---|---|---|---|
+| `icon/svg/robomotion-icon-white.svg` | White | Transparent | Black and dark backgrounds |
+| `icon/svg/robomotion-icon-black.svg` | Black | Transparent | White and light backgrounds |
+| `icon/svg/robomotion-icon-square-dark.svg` | White | `#0A0A0A` | App icon, avatar, favicon |
+| `icon/svg/robomotion-icon-square-light.svg` | Black | `#FFFFFF` | App icon on light chrome |
+
+PNGs for all four sit in `icon/png/` at 16, 32, 48, 64, 128, 256, 512 and 1024 px.
+The two `square-` variants are opaque and ready to use where a platform demands a
+filled tile; the other two are transparent and drop onto any ground.
+
+The square plate is `#0A0A0A`, carried over from the existing app icon rather than
+pure black — it reads better against true-black UI chrome. Pure `#000000` is a
+one-line change if you'd rather match the brand ink exactly.
+
+**Minimum icon size: 32 px.** At 16 px the R's counter fills in and the accent
+wedge falls below one pixel. If you need a crisp 16 px favicon, it needs a
+purpose-drawn variant with a heavier wedge — not a downscale of this one.
+
 ## Colours
 
 | Role | HEX | RGB | CMYK (FOGRA39L coated) |

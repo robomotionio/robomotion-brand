@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Robomotion icon</title>
+  <desc>App icon: white R with orange accent on a near-black plate.</desc>
+  <rect width="512" height="512" fill="#0A0A0A"/>
+  <g transform="translate(156.1222,8.5754) scale(3.026601)">
+    <path d="M18.9,105 L18.9,47.6 L31.9,47.6 C34.5,47.6 37.5,48.3 39.6,49.6 C42.1,51.2 44,54.3 44,58.2 C44,62.3 42.1,65.8 39.8,67.3 C37.3,68.9 33.2,69.3 28.4,69.3 L25.3,69.3 L44.6,105 L64.1,105 L48.8,77.8 C52.3,76.3 55.9,73.8 58.4,69.9 C60.5,66.6 62.1,62.2 62.1,56.5 C62.1,48.4 59.3,41.1 53.1,36.3 C49,33.1 41.8,31 30.2,31 L0,31 L0,105 L18.9,105 Z" fill="#FFFFFF" fill-rule="nonzero"/>
+    <polygon points="66,115 0.5,132.5 0,132 0,115" fill="#FA6400"/>
+  </g>
+</svg>
