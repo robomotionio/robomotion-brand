@@ -167,6 +167,11 @@ slot takes (max 5 per listing). Same no-alpha 24-bit PNG rule as the tiles.
 | `robomotion-packages-1280x800.png` | Cropped. 1696 × 1060 window, cut in the card gutter before column 7, then scaled 0.755 |
 | `robomotion-packages-1280x800-full-ui.png` | Same source letterboxed instead of cropped: whole UI kept, scaled 0.667, thin bars top and bottom |
 | `robomotion-fork-branch-1280x800.png` | Padded. Cropping to 1.6 truncated the panel annotation paragraphs mid-word, so the full UI is letterboxed instead |
+| `robomotion-record-actions-640x400.png` | Composited. Source dialog is near-square (527 x 511); set on the brand backdrop at 0.689 scale with a drop shadow rather than flat letterbox bars |
+| `robomotion-record-actions-640x400-ip-masked.png` | Same, with the machine IP pixelated |
+
+**Check screenshots for live data before publishing** - machine IPs, hostnames,
+customer names and file paths all leak through UI captures.
 
 **Pad or crop is decided per image, not by rule.** A diagram on empty ground
 pads well and crops terribly. A dense UI crops well and pads to smaller,
