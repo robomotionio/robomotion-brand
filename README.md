@@ -166,6 +166,7 @@ slot takes (max 5 per listing). Same no-alpha 24-bit PNG rule as the tiles.
 | `hermes-agent-flow-1280x800.png` | Padded. Source was 2.26 aspect; cropping to 1.6 would have cut whole nodes off both ends, so the diagram is scaled to 1216 wide and centred on its own `#222226` |
 | `robomotion-packages-1280x800.png` | Cropped. 1696 × 1060 window, cut in the card gutter before column 7, then scaled 0.755 |
 | `robomotion-packages-1280x800-full-ui.png` | Same source letterboxed instead of cropped: whole UI kept, scaled 0.667, thin bars top and bottom |
+| `robomotion-fork-branch-1280x800.png` | Padded. Cropping to 1.6 truncated the panel annotation paragraphs mid-word, so the full UI is letterboxed instead |
 
 **Pad or crop is decided per image, not by rule.** A diagram on empty ground
 pads well and crops terribly. A dense UI crops well and pads to smaller,
